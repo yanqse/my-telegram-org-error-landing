@@ -1,8 +1,6 @@
 (() => {
   'use strict';
-  const counterId = 113108225;
-  const apiUrl = 'https://api.my-telegram-org-error.nuvqetra.com/v1/visits';
-  const botUrl = 'https://t.me/my_telegram_org_error_bot';
+  const {counterId, apiUrl, botUrl, clickGoal} = window.LANDING_CONFIG;
   const params = new URLSearchParams(location.search);
   const fields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
   const fallback = [params.get('utm_source') || 'landing', params.get('utm_campaign') || '']
@@ -55,7 +53,7 @@
       const timer = setTimeout(resolve, 800);
       const done = () => {clearTimeout(timer); resolve();};
       try {
-        if (typeof window.ym === 'function') window.ym(counterId, 'reachGoal', 'telegram_click', {}, done);
+        if (typeof window.ym === 'function') window.ym(counterId, 'reachGoal', clickGoal, {}, done);
         else done();
       } catch (_) {done();}
     });

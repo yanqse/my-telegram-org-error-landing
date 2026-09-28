@@ -6,6 +6,7 @@
   <title>my.telegram.org не работает? Сделаем приложение за вас</title>
   <meta name="description" content="my.telegram.org выдаёт ERROR при создании приложения? Сделаем всё за вас и пришлём готовые api_id и api_hash. 1100 ₽." />
   <meta name="theme-color" content="#ffffff" />
+  <script src="./config.js"></script>
   <!-- Yandex Metrika -->
   <script>
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -13,7 +14,7 @@
       for (var j=0;j<document.scripts.length;j++) {if(document.scripts[j].src===r){return;}}
       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
     })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
-    ym(113108225, 'init', {clickmap:true, trackLinks:true, accurateTrackBounce:true});
+    ym(window.LANDING_CONFIG.counterId, 'init', {clickmap:true, trackLinks:true, accurateTrackBounce:true});
   </script>
   <style>
     *{box-sizing:border-box}
